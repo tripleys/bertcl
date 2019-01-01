@@ -42,6 +42,8 @@ public class Packets {
 	public static final short GOTO = 76;
 
 	public static final short GOTOACK = 81;
+	
+	public static final short USEPORTAL = 91;
 
 	/**
 	 * Creates a new {@link Packet} instance by type and returns it.
