@@ -179,13 +179,6 @@ public class GameClient implements PacketHandler, ClientListener, Canvas {
 				this.playerData = ObjectStatusData.processObject(osd);
 				continue;
 			}
-			if (Characters.isCharacter(osd.objectType)) {
-				PlayerData pd = ObjectStatusData.processObject(osd);
-				if (pd.name.equals("BertXDaA")) {
-					this.followId = osd.status.objectId;
-					continue;
-				}
-			}
 		}
 	}
 
@@ -211,12 +204,6 @@ public class GameClient implements PacketHandler, ClientListener, Canvas {
 		}
 		this.moveRecords.clear(move.time);
 		this.client.sendPacket(move);
-		for(ObjectStatusData osd : newTick.statuses) {
-			if (osd.objectId == this.followId) {
-				this.moveTowards(osd.pos);
-				break;
-			}
-		}
 	}
 
 	@Override
