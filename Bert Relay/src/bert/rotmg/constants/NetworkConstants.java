@@ -28,5 +28,5 @@ public class NetworkConstants {
 	/**
 	 * Build version the only constant you need to change
 	 */
-	public static final String BUILD = "X31.2.1";
+	public static final String BUILD = "X31.2.3";
 }
